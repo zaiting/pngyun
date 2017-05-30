@@ -1,0 +1,5 @@
+<!--add.wxml-->
+<view class="container-add">
+<textarea auto-height placeholder="说出你想说的"  class="add"/>
+<button type="primary" bindtap="ok">确定</button>
+</view>
