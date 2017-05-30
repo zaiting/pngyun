@@ -12,33 +12,53 @@
   <view class="add" bindtap="bindAdd"></view>
   <!--<view class="classname">title</view>-->
   <view class="item-container">
+
+    <view wx:for="{{Msg}}" class="item {{item.cls}}" bindtap="bindDetail">
+      <view class="item-header">
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
+      </view>
+      <view class="item-body">{{item.content}}</view>
+    </view>
+
     <view class="item turquoise">
       <view class="item-header">
-        <view class="avater"><image src="../../imgs/avatar.png"></image></view>
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
       </view>
       <view class="item-body">123333</view>
     </view>
     <view class="item emerland">
       <view class="item-header">
-        <view class="avater"><image src="../../imgs/avatar.png"></image></view>
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
       </view>
       <view class="item-body">123333</view>
     </view>
     <view class="item peterriver" bindtap="bindDetail">
       <view class="item-header">
-       <view class="avater"><image src="../../imgs/avatar.png"></image></view>
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
       </view>
       <view class="item-body">123333</view>
     </view>
     <view class="item amethyst">
       <view class="item-header">
-        <view class="avater"><image src="../../imgs/avatar.png"></image></view>
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
       </view>
       <view class="item-body">123333</view>
     </view>
     <view class="item wetasphalt">
       <view class="item-header">
-       <view class="avater"><image src="../../imgs/avatar.png"></image></view>
+        <view class="avater">
+          <image src="../../imgs/avatar.png"></image>
+        </view>
       </view>
       <view class="item-body">床前明月光，疑是地上霜，举头望明月，低头思故乡</view>
     </view>

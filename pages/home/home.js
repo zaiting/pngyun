@@ -3,31 +3,43 @@
 var app = getApp()
 Page({
   data: {
-
+    Msg: [{
+      title: '',
+      content:'Test',
+      cls:'turquoise'
+    },{
+      title:'',
+      content:'这是一条测试信息',
+      cls:'peterriver'
+      }, {
+        title: '',
+        content: '两只黄鹂鸣翠绿，一行白鹭上青天',
+        cls: 'wetasphalt'
+      }]
   },
   onPullDownRefresh: function () {
     console.log('----下拉刷新----');
     wx.showNavigationBarLoading();
-    setTimeout(function(){
+    setTimeout(function () {
       wx.hideNavigationBarLoading();
-    },10000);
-  // wx.request({
-  //   url: '',
-  //   data:{},
-  //   method:'GET',
-  //   success:function(){},
-  //   fail:function(){},
-  //   complete:function(){
-  //     wx.hideNavigationBarLoading();
-  //     wx.stopPullDownRefresh();
-  //   }
-  // })
+    }, 10000);
+    // wx.request({
+    //   url: '',
+    //   data:{},
+    //   method:'GET',
+    //   success:function(){},
+    //   fail:function(){},
+    //   complete:function(){
+    //     wx.hideNavigationBarLoading();
+    //     wx.stopPullDownRefresh();
+    //   }
+    // })
 
     wx.stopPullDownRefresh();
   },
-  bindDetail:function(){
+  bindDetail: function () {
     wx.navigateTo({
-      url:'../detail/detail'
+      url: '../detail/detail'
     });
   },
   bindAdd: function () {
@@ -41,7 +53,7 @@ Page({
     // });
     app.getUserInfo(function (userInfo) {
       //更新数据
-    // debugger;
+      // debugger;
     })
     var position = wx.getLocation({
       type: 'wgs84',
@@ -51,7 +63,7 @@ Page({
         var speed = res.speed;
         var accuracy = res.accuracy;
         wx.showToast({
-          title: '位置信息:'+latitude+','+longitude,
+          title: '位置信息:' + latitude + ',' + longitude,
           icon: 'success',
           duration: 2000
         })

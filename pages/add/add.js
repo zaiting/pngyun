@@ -10,10 +10,15 @@ Page({
   /*点击确定 */
   ok: function () {
     wx.request({
-      url: '',
+      url: 'http://localhost:6438/API/Talk/Add',
       data: {},
       method: 'POST',
-      success: function () { 
+      success: function (data) { 
+        wx.showToast({
+          title: '添加成功',
+          icon: 'success',
+          duration: 2000
+        })
         wx.navigateBack();
       },
       fail: function () { },
